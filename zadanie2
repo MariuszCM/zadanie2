@@ -1,0 +1,89 @@
+#include <stdio.h>
+
+
+union miesiac
+{
+	char grudzien[31][2];
+}moj_miesiac;
+
+int main()
+{
+    union moj_miesiac;
+    int i,j;
+
+
+
+//moj_miesiac.grudzien[0][0]=1;
+//moj_miesiac.grudzien[1][0]=2;
+
+     for(i=0;i<31;i++)
+     {
+
+
+    //   moj_miesiac.grudzien[i][j]=i+1;
+
+
+
+
+      for(j=0;j<2;j++)
+        {
+
+          printf(" tablica[%d][%d]:%d ",i,j,i);
+      //   printf("\n");
+
+
+ }
+        if(i%7==0)
+          {
+             printf("poniedzialek \n");
+          }
+           if(i%7==1)
+          {
+             printf("wtorek \n");
+          }
+           if(i%7==2)
+          {
+             printf("sroda \n");
+          }
+           if(i%7==3)
+          {
+             printf("czwartek \n");
+          }
+           if(i%7==4)
+          {
+             printf("piatek \n");
+          }
+           if(i%7==5)
+          {
+             printf("sobota \n");
+          }
+           if(i%7==6)
+          {
+             printf("niedziela \n");
+          }
+
+    }
+
+
+    printf("wynik 00: %d",moj_miesiac.grudzien[0][0]);
+     return 0;
+
+
+
+}
+
+
+/*
+
+int main()
+{
+    int i;
+    i=0;
+    while(i<31)
+    {
+        printf("%d \n", i);
+        i++;
+    }
+}
+*/
+
